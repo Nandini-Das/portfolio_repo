@@ -2,39 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Fade, Bounce } from 'react-awesome-reveal';
 import { Container, Typography, Grid, Button, ButtonGroup } from '@mui/material';
 import { Element } from 'react-scroll';
-const styles = {
-  container: {
-    paddingTop: '2rem',
-    paddingBottom: '2rem',
-  },
-  title: {
-    fontWeight: 'bold',
-    marginBottom: '1rem',
-  },
-  description: {
-    marginBottom: '2rem',
-  },
-  skillsContainer: {
-    margin: '2rem',
-    textAlign: 'center',
-  },
-  buttonGroup: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '0.5rem',
-    padding: '0.5rem',
-    borderRadius: '10px',
-  },
-  skillButton: {
-    fontWeight: 'bold',
-    fontStyle: 'italic',
-    border: '1px solid #800080',
-    transition: 'all 0.3s ease',
-    '&:hover': {
-      borderColor: '#ff4081',
-    },
-  },
-};
 
 const AboutPage = () => {
   const [totalProjects, setTotalProjects] = useState(0);
@@ -43,7 +10,40 @@ const AboutPage = () => {
   const totalTarget = 20;
   const completedTarget = 15;
   const runningTarget = 5;
-
+  const styles = {
+    container: {
+      paddingTop: '2rem',
+      paddingBottom: '2rem',
+    },
+    title: {
+      fontWeight: 'bold',
+      marginBottom: '1rem',
+    },
+    description: {
+      marginBottom: '2rem',
+    },
+    skillsContainer: {
+      margin: '2rem',
+      textAlign: 'center',
+    },
+    buttonGroup: {
+      display: 'flex',
+      justifyContent: 'center',
+      gap: '0.5rem',
+      padding: '0.5rem',
+      borderRadius: '10px',
+    },
+    skillButton: {
+      fontWeight: 'bold',
+      fontStyle: 'italic',
+      border: '1px solid #800080',
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        borderColor: '#ff4081',
+      },
+    },
+  };
+  
   useEffect(() => {
     const totalTimer = setInterval(() => {
       if (totalProjects < totalTarget) {

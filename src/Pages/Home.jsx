@@ -3,6 +3,9 @@ import { Fade, Bounce } from 'react-awesome-reveal';
 import { Link } from 'react-router-dom';
 import AboutPage from './About';
 import Projects from './Projects';
+import Contact from './Contact';
+import Education from './Education';
+import { Container } from '@mui/material';
 
 const styles = {
   container: {
@@ -86,6 +89,7 @@ const Home = () => {
   return (
     
   <>
+  <Container>
   <div style={styles.container}>
       <div style={styles.leftSection}>
         <Fade direction="left" triggerOnce>
@@ -122,8 +126,12 @@ const Home = () => {
         </Bounce>
       </div>
     </div>
+  </Container>
     <AboutPage></AboutPage>
     <Projects></Projects>
+    <Education></Education>
+    <Contact></Contact>
+    
     </>
   );
 };

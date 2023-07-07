@@ -39,15 +39,7 @@ const styles = {
 };
 
 const Footer = () => {
-  const [message, setMessage] = useState('');
-
-  const handleSendMessage = () => {
-    // You can customize the code below to send the message to your email inbox
-    // using your preferred method (e.g., server-side processing, email service, etc.)
-    // For demonstration purposes, we'll simply log the message to the console.
-    console.log('Message:', message);
-  };
-
+  
   return (
     <>
     <footer style={styles.footer}>
@@ -69,29 +61,11 @@ const Footer = () => {
           onClick={() => console.log('GitHub clicked')}
         />
       </div>
-      <div style={styles.querySection}>
-        <TextField
-          style={styles.queryInput}
-          type="text"
-          placeholder="Ask any query"
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-        <Button
-          style={styles.sendMessageButton}
-          variant="contained"
-          onClick={handleSendMessage}
-         
-        >
-          <SendIcon />
-        </Button>
-        
-
-      </div>
+   
      
     </footer>
     <div style={styles.copyright}>
-        <small>&copy; 2023 Send Message. All rights reserved.</small>
+        <small>&copy; 2023 Nandini Das Rima. All rights reserved.</small>
       </div>
       </>
   );
